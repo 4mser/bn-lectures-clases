@@ -65,6 +65,8 @@ El README de cada clase trae los comandos con sus valores, los tres formatos y c
 3. **Clase:** copia la [`plantilla/`](plantilla/) a `clases/<carrera>/<ramo>/<NN-clase>/` y sigue su README: guion, línea de tiempo, escenas, `serie.ts`, voz, música y render.
 4. **Documentación:** cada clase lleva su README con el mismo orden que las demás, un GIF corto en `docs/assets/` y su fila en el README del ramo.
 
+El motor de simulación de las clases (`src/lab/`) viene de [bn-lab-simulations](https://github.com/4mser/bn-lab-simulations), el laboratorio interactivo de B&N. Cada clase lo enlaza en su cierre.
+
 ### `// 05` Lo que no está en git
 
 - **Las voces.** Los mp3 se generan con `audio/generar_voz.py` de cada clase (edge-tts, voz `es-CL-LorenzoNeural`); el guion sí está.
