@@ -1,0 +1,5 @@
+# Entorno de Python para generar la voz, la música y los renders de las clases
+edge-tts==7.3.1
+numpy==2.5.4
+imageio-ffmpeg==0.6.0
+pillow==13.0.0

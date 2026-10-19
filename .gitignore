@@ -1,0 +1,22 @@
+# Sistema y editores
+.DS_Store
+*.pyc
+__pycache__/
+.venv/
+.env
+.env.*
+
+# Dependencias y salidas regenerables (ver el README de cada clase: «Cómo renderizarla»)
+node_modules
+build/
+out/
+tmp/
+pylib
+pylib/
+
+# Voz y música: se generan con audio/generar_voz.py y audio/generar_musica.py
+**/public/voz/
+**/public/musica.wav
+
+# Videos: se publican como assets de los releases, no en git
+*.mp4
