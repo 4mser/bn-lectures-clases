@@ -1,0 +1,101 @@
+import React, { useContext } from "react";
+import { Img, staticFile, useVideoConfig } from "remotion";
+import { Cabeza, EnColumna, Escena, Mono, aparece, useT } from "../comun";
+import { Simulacion } from "../lab/motor";
+import { carga, linea, particulas, trazar, type Fuente, type Pt } from "../lab/luz";
+import { palabra } from "../lab/historia";
+import { INFO, w } from "../linea";
+import { C, MARGEN, MONO, RGB, SANS, W, eOut, lerp, pr } from "../theme";
+import type { Sfx } from "../sfx";
+import { SERIE } from "../serie";
+
+const E = 14;
+const T_SIGNOS = w(E, "signos");
+const T_CUANT = w(E, "cuantizada");
+const T_CONSERVA = w(E, "conserva");
+const T_CADA = w(E, "cada");
+const T_VIVO = w(E, "vivo");
+const T_VIENE = w(E, "viene");
+export const sfx14: Sfx[] = [
+  [E, T_SIGNOS, "tic"],
+  [E, T_CUANT, "tic"],
+  [E, T_CONSERVA, "tic"],
+  [E, T_VIVO, "check"],
+  [E, T_VIENE + 1.6, "campana"],
+];
+
+// Una carga + y una −: las líneas de campo salen de la positiva y terminan en la negativa (lo que viene: Coulomb).
+const POS = { x: 330, y: 700, q: 1 };
+const NEG = { x: 750, y: 700, q: -1 };
+const FUENTES: Fuente[] = [POS, NEG];
+const CAJA: [number, number, number, number] = [-60, 400, 1140, 980];
+const LINEAS: Pt[][] = Array.from({ length: 16 }, (_, i) => {
+  const ang = (i / 16) * Math.PI * 2 + 0.2;
+  return trazar(FUENTES, POS.x + Math.cos(ang) * 16, POS.y + Math.sin(ang) * 16, 1, 320, 5, CAJA);
+});
+// Las tres propiedades de la carga, cada una cuando la voz la nombra.
+const PROPIEDADES: [string, number][] = [
+  ["Dos signos", T_SIGNOS],
+  ["Cuantizada", T_CUANT],
+  ["Se conserva", T_CONSERVA],
+];
+
+const step = (ctx: CanvasRenderingContext2D, _w: number, _h: number, t: number) => {
+  const kl = eOut(pr(t, 0.3, 2));
+  LINEAS.forEach((pts, i) => {
+    const corte = pts.slice(0, Math.max(2, Math.round(pts.length * kl)));
+    linea(ctx, corte, RGB.hielo, 0.16 * kl, 1);
+    particulas(ctx, corte, t, 75, 4, RGB.hielo, 0.75 * kl, i + 21, 1.5);
+  });
+  const k = eOut(pr(t, 0.1, 0.7));
+  carga(ctx, POS.x, POS.y, 14, RGB.pos, k, t);
+  carga(ctx, NEG.x, NEG.y, 14, RGB.neg, k, t);
+  PROPIEDADES.forEach(([s, t0], i) => {
+    const kp = eOut(pr(t, t0, 0.5));
+    palabra(ctx, s, lerp(220, 860, i / 2), 470, 34, i === 2 ? RGB.azul : RGB.blanco, kp);
+  });
+};
+
+// Créditos: abajo del reel en vertical; en horizontal, en la columna bajo el título.
+const CreditosBase: React.FC<{ t: number }> = ({ t }) => {
+  const columna = useContext(EnColumna);
+  return (
+    <div style={{ ...(columna ? { position: "relative", marginTop: 64 } : { position: "absolute", left: MARGEN, right: MARGEN, top: 1010 }), ...aparece(t, T_VIVO, 0.8, 16) }}>
+      <Mono size={columna ? 11 : 13} color={C.texto4}>
+        {SERIE.credito}
+      </Mono>
+      <div style={{ height: 1, background: "rgba(244,245,248,.1)", margin: "18px 0 22px", width: columna ? "100%" : W - 2 * MARGEN }} />
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end" }}>
+        <div>
+          <Mono size={14} color={C.texto3}>
+            Código abierto · Licencia MIT
+          </Mono>
+          <div style={{ fontFamily: SANS, fontWeight: 500, fontSize: 44, color: C.texto, marginTop: 12, letterSpacing: -0.5 }}>BN Lab Simulations</div>
+          <div style={{ fontFamily: MONO, fontSize: columna ? 18 : 21, color: C.azul, marginTop: 8, whiteSpace: "nowrap" }}>github.com/4mser/bn-lab-simulations</div>
+        </div>
+        {columna ? null : <Img src={staticFile("img/bn-logo.png")} style={{ height: 84, marginBottom: 6 }} />}
+      </div>
+    </div>
+  );
+};
+const Creditos = Object.assign(CreditosBase, { columna: true });
+
+// Solo en horizontal: el logo va abajo a la derecha, justo sobre «Código abierto · MIT» del cromo.
+const LogoBase: React.FC<{ t: number }> = ({ t }) => (
+  <Img src={staticFile("img/bn-logo.png")} style={{ position: "absolute", right: MARGEN, bottom: 84, height: 84, ...aparece(t, T_VIVO, 0.8, 16) }} />
+);
+const Logo = Object.assign(LogoBase, { cuadro: true });
+
+export const Cierre: React.FC<{ dur: number }> = ({ dur }) => {
+  const t = useT();
+  const { width, height } = useVideoConfig();
+  const horizontal = width > height;
+  return (
+    <Escena dur={dur}>
+      <Simulacion t={t} step={step} />
+      <Cabeza ceja={INFO[E].ceja} titulo="Cada número de este video *se calculó en vivo*" bajada="Lo que viene: la ley de Coulomb." tBajada={T_VIENE} t0={T_CADA - 0.1} />
+      <Creditos t={t} />
+      {horizontal ? <Logo t={t} /> : null}
+    </Escena>
+  );
+};
