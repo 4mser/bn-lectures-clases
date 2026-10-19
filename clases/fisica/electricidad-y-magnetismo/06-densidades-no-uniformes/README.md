@@ -103,12 +103,12 @@ python herramientas/render.py 600 2 ClaseTT   # → out/Densidades-no-uniformes-
 
 ### `// 06` Equipo
 
-Esta clase se basa en los «Apuntes de Electricidad y Magnetismo» de **Javier Patiño**, que están en [`../apuntes/`](../apuntes/). Se armó desde la plantilla de la serie, que parte del reel original de **Benjamín Campos**, «De lo discreto a lo continuo».
+Esta clase se basa en los «Apuntes de Electricidad y Magnetismo» de **Javier Patiño**, que están en [`../apuntes/`](../apuntes/). Se armó desde la plantilla de la serie, que parte de «De lo discreto a lo continuo», la clase de **Benjamín Campos**.
 
 | | |
 |---|---|
 | **Nicolás Moreno**<br>[@4mser](https://github.com/4mser) | Cofundador de B&N Solutions e ingeniero de software. Creó el motor de simulación de B&N Lab y desarrolla las animaciones y los videos. |
-| **Benjamín Campos**<br>[@B3njjaman](https://github.com/B3njjaman) | Cofundador de B&N Solutions e ingeniero físico. Creó el reel original de la serie, «De lo discreto a lo continuo». |
+| **Benjamín Campos**<br>[@B3njjaman](https://github.com/B3njjaman) | Cofundador de B&N Solutions e ingeniero físico. Autor de la clase «De lo discreto a lo continuo». |
 | **Javier Patiño** | Licenciado en Física y profesor de Electricidad y Magnetismo. Autor de los apuntes en que se basan las clases y la voz de B&N Lectures. |
 
 ---

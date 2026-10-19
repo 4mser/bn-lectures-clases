@@ -99,18 +99,18 @@ python herramientas/render.py 600 2 ClaseTT   # → out/De-lo-discreto-a-lo-cont
 
 ### `// 05` Notas
 
-- Es la clase original de la serie: Benjamín Campos la hizo como el reel «De lo discreto a lo continuo» con el motor de simulación de B&N Lab (`src/lab/`), de Nicolás Moreno, que es la base de todas las demás. La versión de este repositorio incluye los formatos 16:9 y 9:16.
+- Benjamín Campos la hizo con el motor de simulación de B&N Lab (`src/lab/`), de Nicolás Moreno, que es la base de todas las clases. De este proyecto sale la plantilla de la serie. La versión de este repositorio incluye los formatos 16:9 y 9:16.
 - Cada escena se dibuja en coordenadas de 1080×1350. En 16:9 se pone a la derecha con la transformación `YT` de `src/theme.ts`, y `Escena` (en `src/comun.tsx`) manda la cabeza, las fórmulas y el HUD a una columna de texto a la izquierda. En vertical los cuadros salen idénticos al reel original.
 - Las fuentes de títulos solo traen el alfabeto latino: las letras griegas y los símbolos (λ, σ, ∞, √) van con KaTeX.
 
 ### `// 06` Equipo
 
-Esta clase es el reel original de **Benjamín Campos**, que dio origen a la serie. Está hecha con el motor de simulación de B&N Lab, de **Nicolás Moreno**. Se basa en «Demostraciones de campos conocidos», de **Javier Patiño**, que está en [`../apuntes/`](../apuntes/).
+Esta clase es de **Benjamín Campos** y está hecha con el motor de simulación de B&N Lab, de **Nicolás Moreno**. Se basa en «Demostraciones de campos conocidos», de **Javier Patiño**, que está en [`../apuntes/`](../apuntes/).
 
 | | |
 |---|---|
 | **Nicolás Moreno**<br>[@4mser](https://github.com/4mser) | Cofundador de B&N Solutions e ingeniero de software. Creó el motor de simulación de B&N Lab y desarrolla las animaciones y los videos. |
-| **Benjamín Campos**<br>[@B3njjaman](https://github.com/B3njjaman) | Cofundador de B&N Solutions e ingeniero físico. Creó el reel original de la serie, «De lo discreto a lo continuo». |
+| **Benjamín Campos**<br>[@B3njjaman](https://github.com/B3njjaman) | Cofundador de B&N Solutions e ingeniero físico. Autor de la clase «De lo discreto a lo continuo». |
 | **Javier Patiño** | Licenciado en Física y profesor de Electricidad y Magnetismo. Autor de los apuntes en que se basan las clases y la voz de B&N Lectures. |
 
 ---
