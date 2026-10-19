@@ -100,7 +100,7 @@ python herramientas/render.py 600 2 ClaseTT   # → out/De-lo-discreto-a-lo-cont
 ### `// 05` Notas
 
 - Benjamín Campos la hizo con el motor de simulación de B&N Lab (`src/lab/`), de Nicolás Moreno, que es la base de todas las clases. De este proyecto sale la plantilla de la serie. La versión de este repositorio incluye los formatos 16:9 y 9:16.
-- Cada escena se dibuja en coordenadas de 1080×1350. En 16:9 se pone a la derecha con la transformación `YT` de `src/theme.ts`, y `Escena` (en `src/comun.tsx`) manda la cabeza, las fórmulas y el HUD a una columna de texto a la izquierda. En vertical los cuadros salen idénticos al reel original.
+- Cada escena se dibuja en coordenadas de 1080×1350. En 16:9 se pone a la derecha con la transformación `YT` de `src/theme.ts`, y `Escena` (en `src/comun.tsx`) manda la cabeza, las fórmulas y el HUD a una columna de texto a la izquierda. En vertical los cuadros salen idénticos al reel de BN_Electromagnetismo.
 - Las fuentes de títulos solo traen el alfabeto latino: las letras griegas y los símbolos (λ, σ, ∞, √) van con KaTeX.
 
 ### `// 06` Equipo

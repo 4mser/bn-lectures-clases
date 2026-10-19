@@ -24,7 +24,7 @@ Seis clases animadas de electrostática, de la carga eléctrica a las distribuci
     <td width="50%" valign="top"><a href="04-una-carga-en-un-campo/"><img src="../../../docs/assets/04-una-carga-en-un-campo.gif" width="100%" alt="Un proyectil y una carga describen la misma parábola"></a><br><b>4 · <a href="04-una-carga-en-un-campo/">Una carga en un campo</a></b><br><sub>Una carga suelta en un campo uniforme: q/m, la parábola y el electrón frente a la gravedad.</sub></td>
   </tr>
   <tr>
-    <td width="50%" valign="top"><a href="05-de-lo-discreto-a-lo-continuo/"><img src="../../../docs/assets/05-de-lo-discreto-a-lo-continuo.gif" width="100%" alt="Un plano infinito cargado con su campo uniforme"></a><br><b>5 · <a href="05-de-lo-discreto-a-lo-continuo/">De lo discreto a lo continuo</a></b><br><sub>De la suma a la integral y las seis demostraciones de campos conocidos. El reel original de la serie.</sub></td>
+    <td width="50%" valign="top"><a href="05-de-lo-discreto-a-lo-continuo/"><img src="../../../docs/assets/05-de-lo-discreto-a-lo-continuo.gif" width="100%" alt="Un plano infinito cargado con su campo uniforme"></a><br><b>5 · <a href="05-de-lo-discreto-a-lo-continuo/">De lo discreto a lo continuo</a></b><br><sub>De la suma a la integral y las seis demostraciones de campos conocidos. La clase de Benjamín Campos.</sub></td>
     <td width="50%" valign="top"><a href="06-densidades-no-uniformes/"><img src="../../../docs/assets/06-densidades-no-uniformes.gif" width="100%" alt="Un semicírculo cargado más brillante arriba"></a><br><b>6 · <a href="06-densidades-no-uniformes/">Densidades no uniformes</a></b><br><sub>La receta de siete pasos y dos ejercicios guiados con densidad variable.</sub></td>
   </tr>
 </table>
