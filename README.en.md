@@ -73,18 +73,11 @@ Each lesson's README has the commands with its own values, the three formats and
 
 ### `// 06` Team
 
-**Nicolás Moreno** · [@4mser](https://github.com/4mser) · [LinkedIn](https://www.linkedin.com/in/nicolasmorenoavila)<br>
-Creative and technical director of B&N Lectures. In this repository he designed and programmed:
-
-- the series of animated Electricity and Magnetism lessons, in their three formats;
-- the lessons' animation engine: kinetic typography, the HUD with numbers computed live and the sync of every animation to the word the voice is saying;
-- the template for new lessons and the tools to render and review them.
-
-**Benjamín Campos** · [@B3njjaman](https://github.com/B3njjaman)<br>
-Co-founder of B&N Solutions. He made the original reel «De lo discreto a lo continuo», which is lesson 5 of the series, and the simulation engine all the lessons build on.
-
-**Javier Patiño**<br>
-Physics graduate and lecturer. Author of the Electricity and Magnetism notes and derivations the lessons are based on, and the voice of B&N Lectures.
+| | |
+|---|---|
+| **Nicolás Moreno**<br>[@4mser](https://github.com/4mser) | Co-founder of B&N Solutions and software engineer. Builds the animation engine, the simulations and the videos. |
+| **Benjamín Campos**<br>[@B3njjaman](https://github.com/B3njjaman) | Co-founder of B&N Solutions and physics engineer. Made the series' original reel and its simulation engine. |
+| **Javier Patiño** | Physics graduate and Electricity and Magnetism lecturer. Author of the notes the classes are based on, and the voice of B&N Lectures. |
 
 ### `// 07` License
 

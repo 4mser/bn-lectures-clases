@@ -103,18 +103,11 @@ python herramientas/render.py 600 2 ClaseTT   # → out/Una-carga-en-un-campo-9x
 
 Esta clase se basa en los «Apuntes de Electricidad y Magnetismo» de **Javier Patiño**, que están en [`../apuntes/`](../apuntes/). Se armó desde la plantilla de la serie, que parte del reel original de **Benjamín Campos**, «De lo discreto a lo continuo».
 
-**Nicolás Moreno** · [@4mser](https://github.com/4mser) · [LinkedIn](https://www.linkedin.com/in/nicolasmorenoavila)<br>
-Dirección creativa y técnica de B&N Lectures. En la serie diseñó y programó:
-
-- la serie de clases animadas de Electricidad y Magnetismo, en sus tres formatos;
-- el motor de animación de las clases: la tipografía cinética, el HUD con cifras calculadas en vivo y la sincronía de cada animación con la palabra que dice la voz;
-- la plantilla para crear clases nuevas y las herramientas para renderizarlas y revisarlas.
-
-**Benjamín Campos** · [@B3njjaman](https://github.com/B3njjaman)<br>
-Cofundador de B&N Solutions. Creó el reel original «De lo discreto a lo continuo» y el motor de simulación en el que se apoya la serie (`src/lab/`).
-
-**Javier Patiño**<br>
-Licenciado en Física y profesor. Autor de los apuntes y demostraciones de Electricidad y Magnetismo en los que se basan las clases, y la voz de B&N Lectures.
+| | |
+|---|---|
+| **Nicolás Moreno**<br>[@4mser](https://github.com/4mser) | Cofundador de B&N Solutions e ingeniero de software. Desarrolla el motor de animación, las simulaciones y los videos. |
+| **Benjamín Campos**<br>[@B3njjaman](https://github.com/B3njjaman) | Cofundador de B&N Solutions e ingeniero físico. Creó el reel original de la serie y su motor de simulación. |
+| **Javier Patiño** | Licenciado en Física y profesor de Electricidad y Magnetismo. Autor de los apuntes en que se basan las clases y la voz de B&N Lectures. |
 
 ---
 
